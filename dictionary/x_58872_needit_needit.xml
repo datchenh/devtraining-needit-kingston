@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" sizeclass="3" type="collection">
+        <element label="Active" max_length="40" name="u_boolean_1" type="boolean"/>
+        <element label="When needed" mandatory="true" max_length="40" name="u_glide_date_time_1" type="glide_date_time"/>
+        <element label="Requested for" mandatory="true" max_length="80" name="u_request_for" type="field_name"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="facilities" label="Request type" mandatory="true" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Facilities" sequence="0" value="facilities"/>
+                <element inactive_on_update="false" label="Facilities 2" sequence="1" value="facilities 2"/>
+                <element inactive_on_update="false" label="Facilities 3" sequence="2" value="facilities 3"/>
+            </choice>
+        </element>
+        <element attributes="base_start=true" label="Requested for" mandatory="true" max_length="80" name="u_table_name_2" type="table_name"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="facilities 2" label="What needed" mandatory="true" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Facilities 2" sequence="0" value="facilities 2"/>
+                <element inactive_on_update="false" label="Choice 2" sequence="1" value="Choice 2"/>
+                <element inactive_on_update="false" label="Choice 3" sequence="2" value="Choice 3"/>
+            </choice>
+        </element>
+        <element label="When needed" mandatory="true" max_length="40" name="u_when_needed" type="due_date"/>
+    </element>
+</database>
